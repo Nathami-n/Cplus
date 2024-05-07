@@ -1,4 +1,4 @@
-import Chart from 'chart.js/auto';
+import Chart from 'chart.js/auto'
 
 (async function () {
 
@@ -9,7 +9,7 @@ import Chart from 'chart.js/auto';
         {year: 2013, count:25},
         {year: 2014, count:22},
         {year: 2015, count:30},
-        {year: 2016, count:26},
+        {year: 2016, count:26
         {year: 2017, count:28},
     ];
 
