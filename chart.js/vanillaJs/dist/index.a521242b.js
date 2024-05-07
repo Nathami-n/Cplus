@@ -587,8 +587,8 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _auto = require("chart.js/auto");
 var _autoDefault = parcelHelpers.interopDefault(_auto);
-(async function() {
-    const data = [
+const showChart = async ()=>{
+    const chartData = [
         {
             year: 2010,
             count: 10
@@ -622,19 +622,21 @@ var _autoDefault = parcelHelpers.interopDefault(_auto);
             count: 28
         }
     ];
-    new (0, _autoDefault.default)(document.getElementById("acquisitions"), {
+    const ctx = document.getElementById("acquisitions");
+    new (0, _autoDefault.default)(ctx, {
         type: "bar",
         data: {
-            labels: data.map((row)=>row.year),
+            labels: chartData.map((section)=>section.year),
             datasets: [
                 {
-                    label: "Acquisitions by year",
-                    data: data.map((row)=>row.count)
+                    label: "Acquisitions per year",
+                    data: chartData.map((section)=>section.count)
                 }
             ]
         }
     });
-})();
+};
+showChart();
 
 },{"chart.js/auto":"d8NN9","@parcel/transformer-js/src/esmodule-helpers.js":"9FYyo"}],"d8NN9":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
