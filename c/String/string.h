@@ -11,7 +11,6 @@ void splicer(string input, int start, int end) {
 
     while(start <= end) {
         printf("%c", splicedString[start]);
-
         start++;
     }
 
