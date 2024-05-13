@@ -7,7 +7,9 @@ int choice, start, end;
 
 int main() {
 
-
+    //run the method
+    void showMenu();
+    getch();
     return 0;
 }
 
@@ -20,6 +22,18 @@ void showMenu() {
         printf("\n\t\t\t Press 3 to exit the demo");
         printf("\n\t\t Make your choice: \t");
         scanf("%d", &choice);
+
+        switch (choice)
+        {
+        case 1:
+            printf("\n\t\t Enter Any string ");
+            fflush(stdin);
+            gets( &(*x));
+            printf("%d", strlen(x));
+            break;
         
+        default:
+            break;
+        }
     }
 }
