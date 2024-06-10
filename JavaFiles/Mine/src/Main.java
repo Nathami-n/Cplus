@@ -1,21 +1,13 @@
+import java.util.*;
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world");
-        Car mine = new Car(2, "nathan");
 
-        System.out.println(mine.name + " " + mine.name);
-    }
+        System.out.println(generateRandomNumber(10));
 
-     static class Car {
-        int number;
-        String name;
-        public Car(int no, String name) {
-            this.number = no;
-            this.name = name;
-        }
     };
 
-
-
-
+    public static int generateRandomNumber(int range) {
+        double randomFloat = Math.random();
+         return (int) (randomFloat * range + 1);
+    }
 }
