@@ -6,24 +6,27 @@
 
 #pragma comment(lib, "ws2_32.lib") // for linking with the ws2 library
 
-class HTTPServer
+namespace HTTP
 {
-public:
-    HTTPServer(const std::string &ip, int port);
-    ~HTTPServer();
+    class HTTPServer
+    {
+    public:
+        HTTPServer(const std::string &ip, int port);
+        ~HTTPServer();
 
-    bool intitialize();
-    void start();
-    void stop();
+        bool initialize();
+        void start();
+        void stop();
 
-private:
-    SOCKET serverSocket;
-    std::string ipAddress;
-    int port;
+    private:
+        SOCKET serverSocket;
+        std::string ipAddress;
+        int port;
 
-    bool createSocket();
-    void handleClient(SOCKET clientSocket);
-    void sendResponse(SOCKET clientSocket, const std::string &response);
-};
+        bool createSocket();
+        void handleClient(SOCKET clientSocket);
+        void sendResponse(SOCKET clientSocket, const std::string &response);
+    };
+} // namespace for the server
 
 #endif
