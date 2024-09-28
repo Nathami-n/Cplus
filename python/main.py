@@ -1,28 +1,23 @@
-import datetime
-import json
+#normal way of generating a factorial
+
+def generate_factorial(num):
+    for i in range(1, num):
+        num = num * i
+
+    return num
 
 
-print(datetime.date(2024, 2, 1))
+print(generate_factorial(6))
 
-# string methods practice
 
-name = "Nathan"
+#generating a factorial using recursion
 
-# get given number of string
-print(name[1:2])
-print(name[:2])
-print(name[0:-1])
-print(name[::])
-print(name[::2])
+def recursive_factorial(num):
+    if num == 1 : return 1
 
-#using json in python
+    num =  num * recursive_factorial(num -1)
 
-my_dic = {}
-my_dic["Nathan"] = {
-    "location": "Nairobi Ke",
-    "Age": 40
-}
+    return num
 
-json_dic = json.dumps(my_dic)
 
-print(json_dic)
+print(recursive_factorial(6))
